@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:H4_ChatApp.ViewModels"
+             x:Class="H4_ChatApp.Views.PrivatePage"
+             Title="Group Chat Room">
+
+    <ContentPage.BindingContext>
+        <ViewModels:PrivatePage_ViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="*, auto" BackgroundColor="{AppThemeBinding  Light={StaticResource WhiteColor}, Dark={StaticResource Gray900}}">
+        <ListView ItemsSource="{Binding PrivatesList}" HasUnevenRows="True" SelectedItem="{Binding selectedPrivate}" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout MinimumHeightRequest="50" Orientation="Horizontal">
+                            <Frame  WidthRequest="45"
+                                           Grid.Column="0"
+                                           CornerRadius="10"
+                                           HasShadow="True"
+                                           Margin="3"
+                                           HorizontalOptions="Start"
+                                           BackgroundColor="{AppThemeBinding  Light={StaticResource ElegantDarkColor}, Dark={StaticResource Gray900}}"
+                                           Padding="3">
+                                <Image HorizontalOptions="Center">
+                                    <Image.Source>
+                                        <FontImageSource
+                                            FontFamily="AwesomeSolid"
+                                            Glyph="&#xf0e0;"
+                                            Size="25"
+                                            Color="#4F3F9B" />
+                                    </Image.Source>
+                                </Image>
+                            </Frame>
+                            <!--<Label Text="{Binding Id}" TextColor="{StaticResource PrimaryColor}" LineBreakMode="WordWrap"/>-->
+                            <Label Margin="5,0,0,0" Text="{Binding Name}" TextColor="{StaticResource PrimaryColor}" VerticalOptions="Center" LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2">
+            <Button
+                    Text="Home" Margin="5"
+                    TextColor="{StaticResource WhiteColor}"
+                    Command="{Binding Navigate_MainPage_Command}"/>
+            <Button
+                    Text="All Chat" Margin="5"
+                    TextColor="{StaticResource WhiteColor}"
+                    Command="{Binding Navigate_ChatRoom_Command}"/>
+            <Button
+                    Text="Groups" Margin="5" 
+                    TextColor="{StaticResource WhiteColor}"
+                    Command="{Binding Navigate_GroupPage_Command}"/>
+            <Button
+                    Text="Private" Margin="5" IsEnabled="False"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
+    
+            <!--<Entry Text="{Binding Message}"></Entry>-->

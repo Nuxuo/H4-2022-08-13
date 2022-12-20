@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:H4_ChatApp.ViewModels"
+             x:Class="H4_ChatApp.Views.ChatRoom"
+             Title="Global Room">
+
+    <ContentPage.BindingContext>
+        <ViewModels:ChatRoom_ViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="*, auto , auto" BackgroundColor="{AppThemeBinding  Light={StaticResource WhiteColor}, Dark={StaticResource Gray900}}">
+        <ListView ItemsSource="{Binding MessageList}" HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowDefinitions="auto, auto, auto">
+                            <Grid ColumnDefinitions="40, *" IsVisible="{Binding IsOwnerMessage}">
+                                <Frame IsVisible="{Binding IsSystemMessage, Converter={StaticResource  BooleanToVisibility}, ConverterParameter=Inverse}"
+                                       CornerRadius="10"
+                                       Grid.Column="1"
+                                       HorizontalOptions="End"
+                                       HasShadow="True"
+                                       Margin="3"
+                                       BackgroundColor="{StaticResource PrimaryColor}"
+                                       Padding="3"
+                                       MinimumWidthRequest="20">
+                                    <Label Text="{Binding Message}"
+                                           Margin="10"
+                                           TextColor="{StaticResource WhiteColor}"
+                                           LineBreakMode="WordWrap"/>
+                                </Frame>
+                            </Grid>
+                            <Grid ColumnDefinitions="*, 40"
+                                  Grid.Row="1"
+                                  IsVisible="{Binding IsOwnerMessage, Converter={StaticResource  BooleanToVisibility}, ConverterParameter=Inverse}">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame IsVisible="{Binding IsSystemMessage, Converter={StaticResource  BooleanToVisibility}, ConverterParameter=Inverse}"
+                                           Grid.Column="0"
+                                           CornerRadius="10"
+                                           HasShadow="True"
+                                           Margin="3"
+                                           HorizontalOptions="Start"
+                                           BackgroundColor="{AppThemeBinding  Light={StaticResource ElegantDarkColor}, Dark={StaticResource Gray900}}"
+                                           Padding="3">
+
+                                        <Label Text="{Binding Message}"
+                                               Margin="10"
+                                               TextColor="{StaticResource DarkColor}"
+                                               LineBreakMode="WordWrap"/>
+                                    </Frame>
+                                    <Label VerticalOptions="Center" Margin="5,0,0,0" Text="{Binding Username}" TextColor="{StaticResource PrimaryColor}"></Label>
+                                </StackLayout>
+                            </Grid>
+                            <Grid
+                                  Grid.Row="2"
+                                  IsVisible="{Binding IsSystemMessage, Converter={StaticResource  BooleanToVisibility}}">
+                                <Frame
+                                       Margin="3"
+                                       HorizontalOptions="CenterAndExpand"
+                                       BackgroundColor="Transparent"
+                                       Padding="3">
+
+                                    <Label Text="{Binding Message}"
+                                           Margin="5"
+                                           TextColor="{StaticResource PrimaryColor}"
+                                           LineBreakMode="WordWrap"/>
+                                </Frame>
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Grid.Row="2">
+            <Grid ColumnDefinitions="auto,*,auto">
+                <Button Grid.Column="0" 
+                        Clicked="OnBackButtonClicked" 
+                        Text="Leave" 
+                        TextColor="{StaticResource WhiteColor}"
+                        Margin="10">
+                </Button>
+                <Editor Grid.Column="1" 
+                        Keyboard="Plain" 
+                        AutoSize="TextChanges" 
+                        MaxLength="180" 
+                        Text="{Binding Message}" 
+                        VerticalOptions="EndAndExpand"
+                        TextColor="{AppThemeBinding  Light={StaticResource DarkColor}, Dark={StaticResource WhiteColor}}"
+                        Margin="10"/>
+                <Button Grid.Column="2" 
+                        Command="{Binding SendCommand}" 
+                        TextColor="{StaticResource WhiteColor}"
+                        Text="Send" 
+                        MinimumWidthRequest="75" 
+                        Margin="10">
+                </Button>
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>

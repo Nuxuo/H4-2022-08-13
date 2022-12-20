@@ -1,0 +1,19 @@
+<html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="center" id="centerdiv">
+        <select id="buildings" onchange="get_RoomHubs()"></select>
+        <select id="RoomHubs"></select>
+        <input type="number" id="days" value="1">
+        <button onclick="get_data()">Get Data</button>
+        <div class="diagram">
+          <div id="line_top_x" style="width: 50%; height: 500px"></div>
+        </div>
+      </div>
+    </body>
+  </html>
+  

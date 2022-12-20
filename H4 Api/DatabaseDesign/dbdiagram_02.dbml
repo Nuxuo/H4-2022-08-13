@@ -1,0 +1,56 @@
+Project H4_Opgave {
+    database_type: 'MariaDB'
+    Note: 'Opgave til H4'
+}
+
+Table Building{
+    "Id" int [not null, pk, increment]
+    
+    "Address" varchar(100) [not null]
+    "Name" varchar(50)
+}
+
+Table Room{
+    "Id" int [not null, pk, increment]
+    
+    "Name" varchar(50)
+    "BuildingId" INT [ref: > Building.Id, not null]
+}
+
+Table Hub {
+  "Id" int [not null, pk, increment]
+  
+  "RoomId" INT [ref: > Room.Id, not null]
+  
+  "Softdeleted" BIT [not null]
+  "CreatedDate" Datetime [not null, default: 'CURRENT_TIMESTAMP', note:'Creation Date']
+}
+
+Table Sensor {
+  "Id" int [not null, pk, increment]
+  
+  "Name" varchar(50) [not null]
+  "DataType" varchar(100) [not null]
+}
+
+Table DataPackage{
+  "Id" int [not null, pk, increment]
+  
+  "HubId" int [not null, ref: > Hub.Id]
+  "SensorDataId" int [not null, ref: > SensorData.Id]
+  
+  "CreatedDate" Datetime [not null, default: 'CURRENT_TIMESTAMP', note:'Creation Date']
+}
+
+Table HubSensors{
+  "Id" int [not null, pk, increment]
+  "HubId" int [not null, ref: > Hub.Id]
+  "SensorId" int [not null, ref: > Sensor.Id]
+  "Port" int [not null]
+}
+
+Table SensorData{
+  "Id" int [not null, pk, increment]
+  "SensorId" int [not null, ref: > Sensor.Id]
+  "Data" double
+}

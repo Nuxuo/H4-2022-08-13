@@ -1,0 +1,77 @@
+is_global = true
+build_property.TargetFramework = net6.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = H4_ChatApp
+build_property.ProjectDir = c:\Users\andre\Desktop\H4 2022-08-13 BACKUP\H4 ChatApp\H4 ChatApp\
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Views/ChatRoom.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Views.ChatRoom.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ChatRoom.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ChatRoom.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Views/GroupChatRoom.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Views.GroupChatRoom.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\GroupChatRoom.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\GroupChatRoom.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Views/GroupsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Views.GroupsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\GroupsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\GroupsPage.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Views/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainPage.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Views/PrivateChatRoom.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Views.PrivateChatRoom.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PrivateChatRoom.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PrivateChatRoom.xaml
+
+[c:/Users/andre/Desktop/H4 2022-08-13 BACKUP/H4 ChatApp/H4 ChatApp/Views/PrivatePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = H4_ChatApp.Views.PrivatePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PrivatePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PrivatePage.xaml
